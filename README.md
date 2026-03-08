@@ -11,7 +11,7 @@ My personal LazyVim Neovim configuration.
 
 2. **Clone this repo**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/lazyvim-config.git ~/.config/nvim
+   git clone https://github.com/sergio-gimenez/lazyvim-config.git ~/.config/nvim
    ```
 
 3. **Install Neovim** (if not installed):
