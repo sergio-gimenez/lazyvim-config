@@ -4,16 +4,18 @@ return {
     "GCBallesteros/jupytext.nvim",
     config = true,
   },
-  {
-    "3rd/image.nvim",
-  },
+  -- Comment out image.nvim if you don't have lua/luarocks installed
+  -- {
+  --   "3rd/image.nvim",
+  -- },
   -- This is the 'VS Code-like' interactive runner
   {
     "benlubas/molten-nvim",
     version = "^1.0.0", -- use version <2.0.0 if you write python
     build = ":UpdateRemotePlugins",
     init = function()
-      vim.g.molten_image_provider = "image.nvim"
+      -- Use text output instead of images (works without image.nvim)
+      vim.g.molten_image_provider = nil
       vim.g.molten_output_win_max_height = 20
     end,
   },

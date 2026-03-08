@@ -14,9 +14,16 @@ My personal LazyVim Neovim configuration.
    git clone https://github.com/sergio-gimenez/lazyvim-config.git ~/.config/nvim
    ```
 
-3. **Install Neovim** (if not installed):
-   - [Neovim releases](https://github.com/neovim/neovim/releases) (v0.10+)
-   - Or via package manager: `brew install neovim`, `sudo apt install neovim`, etc.
+3. **Install Neovim** (required: v0.11.2+):
+   ```bash
+   # Download and install Neovim v0.11.2+
+   curl -LO https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.tar.gz
+   tar xzf nvim-linux-x86_64.tar.gz
+   sudo mv nvim-linux-x86_64 /opt/nvim
+   sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
+   ```
+
+   Or via package manager: `brew install neovim`, `sudo apt install neovim`, etc. (but may be outdated)
 
 4. **Launch Neovim**:
    ```bash
@@ -27,10 +34,14 @@ My personal LazyVim Neovim configuration.
 
 ## Requirements
 
-- Neovim v0.10+
+- Neovim v0.11.2+ (required by LazyVim)
 - Git
 - A terminal with true color support
 - A Nerd Font (for icons)
+
+### Optional (for Jupyter image support)
+
+- lua & luarocks (for `image.nvim` - currently disabled by default)
 
 ## Custom Plugins
 
