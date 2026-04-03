@@ -1,0 +1,4 @@
+-- Copy this file to `lua/config/local.lua` for machine-specific settings.
+
+-- Example:
+-- vim.g.vimtex_view_method = "zathura_simple"

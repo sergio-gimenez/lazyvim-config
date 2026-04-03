@@ -1,68 +1,38 @@
 # LazyVim Configuration
 
-My personal LazyVim Neovim configuration.
+Public LazyVim configuration with local override hooks for machine-specific settings.
 
 ## Setup
 
-1. **Backup existing config** (if any):
+1. Clone the repo anywhere:
    ```bash
-   mv ~/.config/nvim ~/.config/nvim.bak
+   git clone https://github.com/sergio-gimenez/lazyvim-config.git ~/mystuff/lazyvim-config
    ```
 
-2. **Clone this repo**:
+2. Point Neovim at it:
    ```bash
-   git clone https://github.com/sergio-gimenez/lazyvim-config.git ~/.config/nvim
+   ln -sfn ~/mystuff/lazyvim-config ~/.config/nvim
    ```
 
-3. **Install Neovim** (required: v0.11.2+):
-   ```bash
-   # Download and install Neovim v0.11.2+
-   curl -LO https://github.com/neovim/neovim/releases/download/v0.11.2/nvim-linux-x86_64.tar.gz
-   tar xzf nvim-linux-x86_64.tar.gz
-   sudo mv nvim-linux-x86_64 /opt/nvim
-   sudo ln -sf /opt/nvim/bin/nvim /usr/local/bin/nvim
-   ```
-
-   Or via package manager: `brew install neovim`, `sudo apt install neovim`, etc. (but may be outdated)
-
-4. **Launch Neovim**:
+3. Launch Neovim:
    ```bash
    nvim
    ```
-   - LazyVim will automatically install all plugins on first launch
-   - Run `:Lazy` to see installation progress
 
-## Requirements
+## Local Overrides
 
-- Neovim v0.11.2+ (required by LazyVim)
-- Git
-- A terminal with true color support
-- A Nerd Font (for icons)
+Keep machine-specific or private settings out of git.
 
-### Optional (for Jupyter image support)
+- `lua/config/local.lua`
+- `lua/plugins/local.lua`
 
-- lua & luarocks (for `image.nvim` - currently disabled by default)
+Example templates are included:
 
-## Custom Plugins
+- `lua/config/local.lua.example`
+- `lua/plugins/local.lua.example`
 
-- **nvim-tree.lua** - File tree
-- **jupyter.lua** - Jupyter notebook support (Molten + Jupytext)
-- **snacks.lua** - Extra utilities
-- **wakatime.lua** - Time tracking
+## Notes
 
-## Keymaps
-
-See `lua/config/keymaps.lua` for custom keymaps. Default LazyVim keymaps are also available.
-
-## Updating
-
-```bash
-:Lazy
-```
-Then press `U` to update all plugins.
-
-## Troubleshooting
-
-If you encounter issues:
-1. Run `:Lazy` → `Checkhealth`
-2. Delete `lazy-lock.json` and restart to reinstall all plugins
+- Neovim `0.11.2+`
+- Hidden files are shown by default in the Snacks explorer
+- `blink.cmp` Copilot source is disabled unless its provider is installed

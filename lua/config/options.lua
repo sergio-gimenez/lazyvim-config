@@ -6,3 +6,4 @@
 vim.g.loaded_perl_provider = 0
 
 vim.g.vimtex_view_method = "zathura_simple"
+vim.opt.autoread = true
