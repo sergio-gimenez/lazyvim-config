@@ -7,6 +7,12 @@ return {
         explorer = {
           hidden = true,
         },
+        grep = {
+          regex = false,
+        },
+        grep_word = {
+          args = {},
+        },
       },
     },
   },
